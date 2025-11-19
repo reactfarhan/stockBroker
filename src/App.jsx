@@ -1,12 +1,14 @@
 
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
   
 
   return (
     <>
-      Appp
+     <Navbar/>
+     <h1>Welcome to StockBroker</h1>
     </>
   )
 }
