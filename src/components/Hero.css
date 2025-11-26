@@ -1,0 +1,163 @@
+.hero-section {
+  background: #fcf9ff;
+  padding: 0px 20px;
+    font-family: monospace;
+
+}
+
+.hero-row {
+  padding: 40px 0;
+}
+
+.hero-left {
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e1e1e;
+  font-family: system-ui;
+}
+
+.hero-title span {
+  color: #3f1272;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* INPUT BOX */
+.hero-input-wrapper {
+  background: white;
+  border-radius: 40px;
+  overflow: hidden;
+  border: 1.5px solid #ddd;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 15px;
+}
+
+.hero-country {
+  padding: 12px 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.hero-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.hero-btn {
+  background: #3f1272;
+  border: none;
+  color: white;
+  padding: 12px 22px;
+  font-weight: 600;
+  /* border-radius: 40px; */
+}
+
+.hero-btn:hover {
+  background: #492bb8;
+}
+
+/* TERMS */
+.hero-terms {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* STATS SECTION */
+.hero-stats {
+  margin-top: 25px;
+  color: #373737;
+}
+
+.hero-backed{
+    margin-bottom: 10px;
+}
+
+.hero-rating {
+  font-size: 28px;
+  font-weight: 700;
+  color: #373737;
+}
+
+.hero-rating-text {
+  font-size: 20px;
+  color: #373737;
+}
+
+.hero-backed-img {
+  width: 40px;
+  margin-top: 5px;
+}
+
+/* PHONE IMAGE */
+.hero-phone-img {
+  max-width: 80%;
+  filter: drop-shadow(0px 6px 18px rgba(0,0,0,0.12));
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-phone-img {
+    margin-top: 40px;
+    max-width: 65%;
+  }
+}
+
+.phone-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+/* Track that slides */
+.phone-slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%; /* since 3 images */
+}
+
+/* Each image */
+.phone-slider-img {
+  width: 100%;
+  /* max-width: 350px; */
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* Dots */
+.phone-slider-dots {
+  padding: 0 0 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.phone-slider-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c9b7e9;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.phone-slider-dots .dot.active {
+  background: #3f1272;
+  transform: scale(1.2);
+}
