@@ -20,7 +20,8 @@ const NAV_ITEMS = [
     <>
       {/* TOP NAV */}
       <nav className="navbar">
-        <div className="nav-items">
+        <div className="container">
+          <div className="nav-items">
           {NAV_ITEMS.map((item) => (
             <div
               key={item.name}
@@ -31,7 +32,10 @@ const NAV_ITEMS = [
             </div>
           ))}
 
-          <button className="open-account-btn">Open An Account</button>
+         
+        </div>
+
+         <button className="open-account-btn">Open An Account</button>
         </div>
       </nav>
 

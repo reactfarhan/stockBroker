@@ -13,17 +13,17 @@
   padding: 16px 0;
   border-bottom: 1px solid #d5d5d5;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .nav-items {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 80px;
 }
 
 .nav-item {
-  font-size: 15px;
+  font-size: 16px;
   color: #fff;
   cursor: pointer;
   padding: 6px 2px;
@@ -87,7 +87,7 @@
 }
 
 .submenu-item {
-  font-size: 14px;
+  font-size: 16px;
   color: #2a2a2a;
   cursor: pointer;
   transition: color 0.2s;

@@ -1,0 +1,98 @@
+/* ✅ OUTER PAGE WRAPPER */
+.market-chart-outer {
+  width: 100%;
+  /* min-height: 100vh; */
+  background: #fcf9ff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 100px 16px;
+}
+
+/* ✅ MAIN CHART CONTAINER */
+.market-chart-wrapper {
+  width: 100%;
+  max-width: 85%;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 30px 28px 24px 28px;
+}
+
+/* ✅ PRICE HEADER */
+.market-price-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.market-price-header h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.market-price-header .positive {
+  font-size: 30px;
+  color: #3f1272;
+  font-weight: 600;
+}
+
+.market-price-header .time-range {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ✅ FIX CHART HEIGHT */
+.recharts-responsive-container {
+  height: 420px !important;
+}
+
+/* ✅ RANGE BUTTON BAR */
+.market-range-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.market-range-buttons button {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.market-range-buttons button:hover {
+  border-color: #3f1272;
+  color: #3f1272;
+}
+
+.market-range-buttons button.active {
+  background: #3f1272;
+  color: #ffffff;
+  border-color: #3f1272;
+  
+}
+
+/* ✅ MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .market-chart-wrapper {
+    padding: 22px 18px;
+  }
+
+  .market-price-header h2 {
+    font-size: 24px;
+  }
+
+  .recharts-responsive-container {
+    height: 300px !important;
+  }
+}
