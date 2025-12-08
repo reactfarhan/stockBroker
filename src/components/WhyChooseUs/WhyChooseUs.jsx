@@ -1,7 +1,7 @@
 import "./WhyChooseUs.css";
 const WhyChooseUs = () => {
   return (
-    <section className="why-section my-5">
+    <section className="why-section pb-5">
       <h1 className="whyus-title">
         Why <span> Choose </span> Us
       </h1>
