@@ -5,6 +5,8 @@ import Hero from "../components/Hero";
 import MarketChart from '../components/LiveTicker/MarketChart';
 import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs';
 
+import ProductSection from '../components/ProductScroll/ProductSection';
+
 
 const HomePage = () => {
   return (
@@ -12,6 +14,7 @@ const HomePage = () => {
     <Navbar/>
     <Hero/>
     <MarketChart/>
+    <ProductSection/>
     <WhyChooseUs/>
     </>
   )
