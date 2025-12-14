@@ -7,6 +7,7 @@ import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs';
 
 import ProductSection from '../components/ProductScroll/ProductSection';
 import AboutUs from '../components/AboutUs/AboutUs';
+import Testimonials from '../components/Testimonials/Testimonials';
 
 
 const HomePage = () => {
@@ -18,6 +19,7 @@ const HomePage = () => {
     <ProductSection/>
     <AboutUs/>
     <WhyChooseUs/>
+    <Testimonials/>
     </>
   )
 }
