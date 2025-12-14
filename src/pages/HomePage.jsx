@@ -6,6 +6,7 @@ import MarketChart from '../components/LiveTicker/MarketChart';
 import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs';
 
 import ProductSection from '../components/ProductScroll/ProductSection';
+import AboutUs from '../components/AboutUs/AboutUs';
 
 
 const HomePage = () => {
@@ -15,6 +16,7 @@ const HomePage = () => {
     <Hero/>
     <MarketChart/>
     <ProductSection/>
+    <AboutUs/>
     <WhyChooseUs/>
     </>
   )

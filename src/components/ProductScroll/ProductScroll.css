@@ -41,6 +41,7 @@
   box-shadow: 0 10px 30px rgba(63, 18, 114, 0.06);
   transition: transform .25s ease, box-shadow .25s ease;
   flex-shrink: 0;
+   transform: translateZ(0);
 }
 .product-card h4 {
   color: #3f1272;
