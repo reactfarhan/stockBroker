@@ -19,60 +19,44 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ProductScrollDesktop() {
   const sectionRef = useRef(null);
   const trackRef = useRef(null);
-
+const SPEED_MULTIPLIER = 1.6;
   useEffect(() => {
-    const el = sectionRef.current;
-    const track = trackRef.current;
+  const el = sectionRef.current;
+  const track = trackRef.current;
 
-  const calcScroll = () => {
-  const extraSpace = window.innerWidth * 0.25; // ✅ 25% extra breathing space
-  return track.scrollWidth - window.innerWidth + extraSpace;
-};
+  let scrollDistance = 0;
 
-    const ctx = gsap.context(() => {
-    gsap.to(track, {
-  x: () => `-${calcScroll()}px`,
-  ease: "none",
-  scrollTrigger: {
-    trigger: el,
-    start: "center center",
-    end: () => `+=${calcScroll()}`,
-    scrub: 1.5,
+  const ctx = gsap.context(() => {
+    ScrollTrigger.matchMedia({
+      "(min-width: 1024px)": () => {
+        const calc = () => {
+          scrollDistance =
+            track.scrollWidth - window.innerWidth + window.innerWidth * 0.25;
+        };
 
-    pin: true,
-    anticipatePin: 1,
-    invalidateOnRefresh: true,
+        calc();
 
-    pinSpacing: true,
-    fastScrollEnd: true,
-    preventOverlaps: true,
+        gsap.to(track, {
+          x: () => -scrollDistance,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "center center",
+           end: () => `+=${scrollDistance * SPEED_MULTIPLIER}`,
+            scrub: 1.0, // ✅ smoother & more responsive
+            pin: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+            onRefresh: calc,
+          },
+        });
+      },
+    });
+  }, el);
 
-    onUpdate: (self) => {
-      // ✅ prevents micro-jumps during momentum scroll
-      if (self.progress >= 0.99) {
-        track.style.willChange = "auto";
-      } else {
-        track.style.willChange = "transform";
-      }
-    },
-  },
-});
+  return () => ctx.revert();
+}, []);
 
-
-      ScrollTrigger.refresh(); // ✅ FORCE REFRESH AFTER LOAD
-    }, el);
-
-    const onResize = () => {
-      ScrollTrigger.refresh();
-    };
-
-    window.addEventListener("resize", onResize);
-
-    return () => {
-      ctx.revert();
-      window.removeEventListener("resize", onResize); // ✅ FIXED
-    };
-  }, []);
 
   return (
     <section className="product-scroll-desktop desktop-only" ref={sectionRef}>
