@@ -38,7 +38,7 @@ export default function Testimonials() {
   const timerRef = useRef(null);
   const trackRef = useRef(null);
 
-  const slideWidth = 33.33;
+  const slideWidth = 34.63;
 
   const startAutoSlide = () => {
     clearInterval(timerRef.current);
@@ -67,7 +67,7 @@ export default function Testimonials() {
   useEffect(() => {
     if (index === testimonials.length) {
       setTimeout(() => {
-        trackRef.current.style.transition = "none";
+        trackRef.current.style.transition = "transform 0.0001s ease";
         setIndex(0);
       }, 600);
     }
@@ -97,10 +97,7 @@ export default function Testimonials() {
 
         {/* RIGHT */}
         <div className="testimonial-right">
-          <div
-            ref={trackRef}
-            className="testimonial-track"
-            style={{
+          <div ref={trackRef} className="testimonial-track" style={{
               transform: `translateX(-${index * slideWidth}%)`,
             }}
           >
