@@ -1,0 +1,124 @@
+.footer {
+  background: linear-gradient(135deg, #3f1272, #2a0b52);
+  padding: 70px 20px;
+}
+
+.footer-container {
+  max-width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  color: #d6c9f0;
+  font-size: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li:hover {
+  color: #ffffff;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding: 50px 20px;
+  }
+}
+
+/* ================= INVESTOR MARQUEE ================= */
+
+.footer-investor-notice {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  /* background: rgba(255, 255, 255, 0.06); */
+  padding: 12px 0;
+  margin-bottom: 48px;
+  overflow: hidden;
+  max-width: 85%;
+  margin: auto;
+}
+
+/* Fixed label */
+.investor-label {
+  flex-shrink: 0;
+  padding-left: 0px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Moving area */
+.investor-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Track */
+.investor-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: investorScroll 35s linear infinite;
+}
+
+.investor-marquee:hover .investor-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Text blocks */
+.investor-marquee-track span {
+  white-space: nowrap;
+  font-size: 14px;
+  color: #e6dcff;
+  padding-right: 10px;
+}
+
+/* Animation */
+@keyframes investorScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .investor-label {
+    font-size: 13px;
+  }
+
+  .investor-marquee-track span {
+    font-size: 13px;
+  }
+}
